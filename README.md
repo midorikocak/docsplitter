@@ -1,6 +1,8 @@
 # docsplitter
 
-This small tools, allows you to split a .docx file into multiple files based on headings. Useful for separating a big word file with chapters, into smaller files.
+[![Software License][ico-license]](LICENSE.md)
+
+This small tool, allows you to split a .docx file into multiple files based on headings. Useful for separating a big word file with chapters, into smaller files.
 
 ## Motivation
 
