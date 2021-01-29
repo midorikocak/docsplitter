@@ -38,7 +38,7 @@ Compiled files will appear on the dist folder.
 
 ## Usage
 
-When you run `dist/docsplitter` for MacOS X or `dist\docsplitter.exe` for Windows 10i firstly help text will appear.
+When you run `dist/docsplitter` for MacOS X or `dist\docsplitter.exe` for Windows 10, firstly help text will appear.
 
 ``` bash
 $ ./docsplitter
