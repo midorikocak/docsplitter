@@ -1,6 +1,8 @@
 # docsplitter
 
-This small tools, allows you to split a .docx file into multiple files based on headings. Useful for separating a big word file with chapters, into smaller files.
+[![Software License][ico-license]](LICENSE.md)
+
+This small tool, allows you to split a .docx file into multiple files based on headings. Useful for separating a big word file with chapters, into smaller files.
 
 ## Motivation
 
@@ -36,7 +38,7 @@ Compiled files will appear on the dist folder.
 
 ## Usage
 
-When you run `dist/docsplitter` for MacOS X or `dist\docsplitter.exe` for Windows 10i firstly help text will appear.
+When you run `dist/docsplitter` for MacOS X or `dist\docsplitter.exe` for Windows 10, firstly help text will appear.
 
 ``` bash
 $ ./docsplitter
