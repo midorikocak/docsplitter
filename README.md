@@ -45,7 +45,10 @@ Usage:  [OPTIONS]
 Options:
   -f, --file TEXT      .docx file to split
   -l, --level INTEGER  Heading Level to split the file
-  --help               Show this message and exit.
+  -nn, --noname        If you do not want to have the filename as a prefix for
+                       generated docs.
+
+  --help               Show this message and exit
 ```
 ### Splitting files
 

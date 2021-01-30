@@ -14,7 +14,8 @@ CONTEXT_SETTINGS = dict(help_option_names=['-h', '--help'])
 @click.command(context_settings=CONTEXT_SETTINGS)
 @click.option('-f','--file', help='.docx file to split')
 @click.option('-l','--level', default=1, help='Heading Level to split the file')
-def docsplitter(file=None, level=1):
+@click.option('-nn','--noname', default=False, is_flag=True, help='If you do not want to have the filename as a prefix for generated docs.')
+def docsplitter(file=None, level=1, noname=False):
     if(file==None):
         with click.Context(docsplitter) as ctx:
             click.echo(ctx.get_help())
@@ -36,6 +37,8 @@ def docsplitter(file=None, level=1):
                 i+=1
                 title = getParagraphTitle(paragraph)
                 newName = str(i) + ' - ' + newBaseName + ' ' + title + '.docx'
+                if(noname):
+                    newName = str(i) + ' - ' + title + '.docx'
                 if(currentName!='' and currentName != newName):
                     currentDocument.save(os.path.join(tmpdirname, currentName))
                     zipObj.write(os.path.join(tmpdirname, currentName), arcname=currentName)
