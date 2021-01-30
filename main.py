@@ -34,17 +34,17 @@ def docsplitter(file=None, level=1, noname=False):
         currentDocument = ''
         for paragraph in document.paragraphs:
             if(is_heading(paragraph, str(level)) or is_Title(paragraph)):
-                i+=1
                 title = getParagraphTitle(paragraph)
-                newName = str(i) + ' - ' + newBaseName + ' ' + title + '.docx'
+                newName = str('{:0>2}'.format(i)) + ' - ' + newBaseName + ' ' + title + '.docx'
                 if(noname):
-                    newName = str(i) + ' - ' + title + '.docx'
+                    newName = str('{:0>2}'.format(i)) + ' - ' + title + '.docx'
                 if(currentName!='' and currentName != newName):
                     currentDocument.save(os.path.join(tmpdirname, currentName))
                     zipObj.write(os.path.join(tmpdirname, currentName), arcname=currentName)
                 newDocument = Document()
                 currentName = newName
                 currentDocument = newDocument
+                i+=1
             cloneParagraph(newDocument, paragraph)
             if 'graphic' in paragraph._p.xml:
                 # Get the rId of the image
