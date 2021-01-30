@@ -61,7 +61,7 @@ Suppose you have `book with long chapters.docx` file.
 $ docsplitter -f  book\ with\ long\ chapters.docx
 ```
 
-will generate `book with long chapters.zip` in the folder you run the docsplitter. When you extract the zipfile splitted files should appear like `1 - book with long chapters - Chapter Name.docx`
+will generate `book with long chapters.zip` in the folder you run the docsplitter. When you extract the zipfile splitted files should appear like `01 - book with long chapters - Chapter Name.docx`
 
 If you don't want the filename as prefix you can use `-nn, --noname` option.
 
@@ -69,7 +69,7 @@ If you don't want the filename as prefix you can use `-nn, --noname` option.
 $ docsplitter -f  book\ with\ long\ chapters.docx -nn
 ```
 
-The generated files will not include original filename na will have only headings. `1 - Chapter Name.docx`
+The generated files will not include original filename na will have only headings. `01 - Chapter Name.docx`
 
 If you want to split your word documents using a different heading, you can use   `-l, --level` option. 
 
